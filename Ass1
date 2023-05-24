@@ -1,0 +1,38 @@
+//PROGRAM ON MERGING OF TWO ARRAYS INTO THIRD ARRAY//
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int i;
+	int n1,n2;
+	int mergearr[100];
+	int arr1[20],arr2[30];
+	printf("Enter the size of 1st array:\n");
+	scanf("%d",&n1);
+	printf("Enter the elements of 1st array:\n");
+	for(i=0;i<n1;i++)
+{
+	scanf("%d",&arr1[i]);
+}
+   printf("Enter the size of 2nd array:\n");
+scanf("%d",&n2);
+printf("Enter the elements of 2nd array:\n");
+	for(i=0;i<n2;i++)
+{
+		
+	scanf("%d",&arr2[i]);
+}
+for(i=0;i<n1;i++){
+
+	mergearr[i]=arr1[i];
+}
+	for(i=0;i<n2;i++){
+		mergearr[i+n1]=arr2[i];
+}
+	printf("Merged array is:");
+	for(i=0;i<n1+n2;i++)
+{
+	printf("\t%d",mergearr[i]);
+}
+return 0;
+}
